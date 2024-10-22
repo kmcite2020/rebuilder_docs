@@ -1,4 +1,3 @@
-import 'package:rebuilder_docs/features/backup/backup.dart';
 import 'package:rebuilder_docs/main.dart';
 
 class BackupPage extends UI {
@@ -12,11 +11,11 @@ class BackupPage extends UI {
       ),
       body: ListView(
         children: [
-          backupRM
-              .build(
-                (state) => state.text(),
-              )
-              .pad(),
+          // backupRM
+          //     .build(
+          //       (state) => state.text(),
+          //     )
+          //     .pad(),
           "Let's Backup your data".text(textScaleFactor: 2).pad(),
           "We'll back up your info in the cloud and automatically keep it up to date. Have peace of mind knowing it's always protected, even if something happens to this PC"
               .text()

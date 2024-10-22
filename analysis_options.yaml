@@ -1,4 +1,7 @@
 analyzer:
+  errors:
+    unnecessary_import: ignore
+    deprecated_member_use: ignore
   enable-experiment:
     - macros
 

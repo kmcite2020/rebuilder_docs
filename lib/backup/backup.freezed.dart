@@ -134,7 +134,7 @@ class __$$BackupImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$BackupImpl implements _Backup {
+class _$BackupImpl with DiagnosticableTreeMixin implements _Backup {
   const _$BackupImpl(
       {this.id = '',
       this.isBackingUp = '',
@@ -158,8 +158,19 @@ class _$BackupImpl implements _Backup {
   final String topics;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'Backup(id: $id, isBackingUp: $isBackingUp, settings: $settings, topics: $topics)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'Backup'))
+      ..add(DiagnosticsProperty('id', id))
+      ..add(DiagnosticsProperty('isBackingUp', isBackingUp))
+      ..add(DiagnosticsProperty('settings', settings))
+      ..add(DiagnosticsProperty('topics', topics));
   }
 
   @override

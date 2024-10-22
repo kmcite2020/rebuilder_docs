@@ -1,4 +1,3 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:rebuilder_docs/main.dart';
 
 part 'backup.freezed.dart';
